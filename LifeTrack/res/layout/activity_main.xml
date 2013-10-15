@@ -39,7 +39,7 @@
         android:layout_marginTop="45dp"
         android:text="20"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="250dp" />
+        android:textSize="250sp" />
 
     <Button
         android:id="@+id/minus_five"
