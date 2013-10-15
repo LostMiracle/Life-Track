@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	
 	int counter;
-	Button add1, add5, sub1, sub5, reset;
+	Button add1, add5, sub1, sub5, bReset;
 	TextView display;
 
 	@Override
@@ -23,10 +23,10 @@ public class MainActivity extends Activity {
 		add5 = (Button) findViewById(R.id.add_five);
 		sub1 = (Button) findViewById(R.id.minus_one);
 		sub5 = (Button) findViewById(R.id.minus_five);
-		reset = (Button) findViewById(R.id.bReset);
+		bReset = (Button) findViewById(R.id.bReset);
 		display = (TextView) findViewById(R.id.tvCounter);
 		
-		reset.setOnClickListener(new View.OnClickListener() {
+		bReset.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
