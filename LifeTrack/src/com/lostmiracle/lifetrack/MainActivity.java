@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				counter = 20;
 				display.setText("" + 20);
 			}
 		});
