@@ -28,17 +28,6 @@
         android:textSize="250sp" />
 
     <Button
-        android:id="@+id/add_five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_one"
-        android:layout_alignBottom="@+id/add_one"
-        android:layout_alignLeft="@+id/tvCounter"
-        android:layout_marginLeft="61dp"
-        android:minWidth="80dp"
-        android:text="+5" />
-
-    <Button
         android:id="@+id/add_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,12 +39,24 @@
         android:text="+1" />
 
     <Button
+        android:id="@+id/add_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/add_one"
+        android:layout_alignBottom="@+id/add_one"
+        android:layout_alignRight="@+id/bReset"
+        android:layout_marginRight="61dp"
+        android:minWidth="80dp"
+        android:text="+5" />
+
+    <Button
         android:id="@+id/minus_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/add_five"
         android:layout_alignBottom="@+id/add_five"
-        android:layout_toRightOf="@+id/add_five"
+        android:layout_alignLeft="@+id/bReset"
+        android:layout_marginLeft="61dp"
         android:minWidth="80dp"
         android:text="-1" />
 

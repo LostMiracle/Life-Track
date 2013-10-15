@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				display.setText("" + 20);
 			}
 		});
 		add1.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +39,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				counter++;
+				display.setText("" + counter);
 			}
 		});
 		add5.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +48,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				counter += 5;
+				display.setText("" + counter);
 			}
 		});
 		sub1.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +57,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				counter--;
+				display.setText("" + counter);
 			}
 		});
 		sub5.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +66,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
+				counter -= 5;
+				display.setText("" + counter);
 			}
 		});
 	}
