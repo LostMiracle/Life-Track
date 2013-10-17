@@ -5,6 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="exitOption">Exit</string>
     <string name="resetOption">Reset</string>
+    <string name="settingsOption">Settings NYI</string>
+    <string name="mainmenuOption">Main Menu NYI</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>

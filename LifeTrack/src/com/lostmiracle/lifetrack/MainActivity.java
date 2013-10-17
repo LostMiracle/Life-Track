@@ -127,7 +127,16 @@ public class MainActivity extends Activity {
 			display.setText("" + 20);
 			return true;
 		}
+		if (item.getItemId() == R.id.settings) {
+			// rest the Activity
+
+		}
+		if (item.getItemId() == R.id.mainmenu) {
+			// rest the Activity
+
+		}
 		return false;
+
 	}
 
 }
