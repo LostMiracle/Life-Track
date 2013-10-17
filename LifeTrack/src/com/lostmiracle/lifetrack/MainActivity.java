@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	int counter, pcounter;
-	Button add1, add5, sub1, sub5, padd1, psub1, bReset;
+	Button add1, add5, sub1, sub5, padd1, psub1;
 	TextView display, pdisplay;
 
 	@Override
@@ -34,7 +35,6 @@ public class MainActivity extends Activity {
 		add5 = (Button) findViewById(R.id.add_five);
 		sub1 = (Button) findViewById(R.id.minus_one);
 		sub5 = (Button) findViewById(R.id.minus_five);
-		bReset = (Button) findViewById(R.id.bReset);
 		display = (TextView) findViewById(R.id.tvCounter);
 		pdisplay = (TextView) findViewById(R.id.tvPoison);
 
@@ -47,17 +47,6 @@ public class MainActivity extends Activity {
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-		bReset.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				counter = 20;
-				pcounter = 0;
-				pdisplay.setText("" + 0);
-				display.setText("" + 20);
-			}
-		});
 		add1.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -117,8 +106,28 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// check selected menu item
+		// R.id.exit is @+id/exit
+		if (item.getItemId() == R.id.exit) {
+			// close the Activity
+			this.finish();
+			return true;
+		}
+		if (item.getItemId() == R.id.reset) {
+			// rest the Activity
+			counter = 20;
+			pcounter = 0;
+			pdisplay.setText("" + 0);
+			display.setText("" + 20);
+			return true;
+		}
+		return false;
 	}
 
 }
