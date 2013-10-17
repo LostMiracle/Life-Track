@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class TwoPlayer extends Activity {
 
 	int counter, pcounter;
 	Button add1, add5, sub1, sub5, padd1, psub1;
@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
 			display.setText("" + 20);
 			return true;
 		}
-		if (item.getItemId() == R.id.twoplayer) {
+		if (item.getItemId() == R.id.oneplayer) {
 			// 2 player
 			Thread timer = new Thread() {
 				public void run() {
@@ -137,9 +137,9 @@ public class MainActivity extends Activity {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					} finally {
-						Intent openTwoPlayer = new Intent(
-								"com.lostmiracle.lifetrack.TWOPLAYER");
-						startActivity(openTwoPlayer);
+						Intent openMainActivity = new Intent(
+								"com.lostmiracle.lifetrack.MAINACTIVITY");
+						startActivity(openMainActivity);
 					}
 				}
 			};

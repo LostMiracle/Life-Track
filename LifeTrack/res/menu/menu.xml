@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <!--
     <item
         android:id="@+id/mainmenu"
         android:title="@string/mainmenuOption">
     </item>
+    -->
     <item
         android:id="@+id/reset"
         android:title="@string/resetOption">
     </item>
     <item
-        android:id="@+id/settings"
-        android:title="@string/settingsOption">
+        android:id="@+id/twoplayer"
+        android:title="@string/twoPlayerOption">
+    </item>
+    <item
+        android:id="@+id/oneplayer"
+        android:title="@string/onePlayerOption">
     </item>
     <item
         android:id="@+id/exit"
