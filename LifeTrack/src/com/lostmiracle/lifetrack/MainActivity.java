@@ -2,6 +2,8 @@ package com.lostmiracle.lifetrack;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +14,12 @@ public class MainActivity extends Activity {
 	int counter, pcounter;
 	Button add1, add5, sub1, sub5, padd1, psub1, bReset;
 	TextView display, pdisplay;
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		// here you can handle orientation change
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,8 @@ public class MainActivity extends Activity {
 		sub1.bringToFront();
 		sub5.bringToFront();
 		display.bringToFront();
+
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		bReset.setOnClickListener(new View.OnClickListener() {
 
