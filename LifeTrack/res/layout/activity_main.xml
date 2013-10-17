@@ -15,20 +15,41 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:text="Reset" />
+        android:text="Reset"
+        android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/tvCounter"
+    <Button
+        android:id="@+id/padd1"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/tvPoison"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/tvPoison"
+        android:text="+1"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvPoison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bReset"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="20"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="250sp" />
+        android:layout_marginBottom="50dp"
+        android:text="0"
+        android:textColor="#008000"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/psub1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvPoison"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/tvPoison"
+        android:text="-1"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/add_one"
@@ -36,44 +57,74 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/bReset"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="75dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="125dp"
         android:minWidth="70dp"
         android:text="+1"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/add_five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_one"
-        android:layout_alignBottom="@+id/add_one"
-        android:layout_toRightOf="@+id/add_one"
-        android:minWidth="70dp"
-        android:text="+5"
-        android:textColor="#FFFFFF" />
+        android:textColor="#00FF00" />
 
     <Button
         android:id="@+id/minus_five"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/minus_one"
-        android:layout_alignBottom="@+id/minus_one"
+        android:layout_above="@+id/bReset"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
+        android:layout_marginBottom="125dp"
         android:minWidth="70dp"
         android:text="-5"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FF0000" />
 
     <Button
         android:id="@+id/minus_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_five"
-        android:layout_alignBottom="@+id/add_five"
+        android:layout_above="@+id/bReset"
+        android:layout_marginBottom="125dp"
         android:layout_toLeftOf="@+id/minus_five"
         android:minWidth="70dp"
         android:text="-1"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FF0000" />
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="225dp"
+        android:text="20"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#C2DFFF"
+        android:textSize="200sp" />
+
+    <Button
+        android:id="@+id/add_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bReset"
+        android:layout_marginBottom="125dp"
+        android:layout_toRightOf="@+id/add_one"
+        android:minWidth="70dp"
+        android:text="+5"
+        android:textColor="#00FF00" />
+
+    <ImageView
+        android:id="@+id/imgPoison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:layout_toLeftOf="@+id/minus_one"
+        android:src="@drawable/poison" />
+
+    <ImageView
+        android:id="@+id/imgHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/add_one"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/heart" />
 
 </RelativeLayout>
