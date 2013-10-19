@@ -12,12 +12,12 @@
         android:title="@string/resetOption">
     </item>
     <item
-        android:id="@+id/twoplayer"
-        android:title="@string/twoPlayerOption">
-    </item>
-    <item
         android:id="@+id/oneplayer"
         android:title="@string/onePlayerOption">
+    </item>
+    <item
+        android:id="@+id/twoplayer"
+        android:title="@string/twoPlayerOption">
     </item>
     <item
         android:id="@+id/exit"

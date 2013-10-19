@@ -13,9 +13,10 @@ import android.widget.TextView;
 
 public class TwoPlayer extends Activity {
 
-	int counter, pcounter;
-	Button add1, add5, sub1, sub5, padd1, psub1;
-	TextView display, pdisplay;
+	int counter, pcounter, counter2, pcounter2;
+	Button add1, add5, sub1, sub5, padd1, psub1, add12, add52, sub12, sub52,
+			padd12, psub12;
+	TextView display, pdisplay, display2, pdisplay2;
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -26,7 +27,7 @@ public class TwoPlayer extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.twoplayer);
 
 		pcounter = 0;
 		counter = 20;
@@ -39,14 +40,23 @@ public class TwoPlayer extends Activity {
 		display = (TextView) findViewById(R.id.tvCounter);
 		pdisplay = (TextView) findViewById(R.id.tvPoison);
 
-		pdisplay.bringToFront();
-		add1.bringToFront();
-		add5.bringToFront();
-		sub1.bringToFront();
-		sub5.bringToFront();
-		display.bringToFront();
+		pcounter2 = 0;
+		counter2 = 20;
+		padd12 = (Button) findViewById(R.id.padd12);
+		psub12 = (Button) findViewById(R.id.psub12);
+		add12 = (Button) findViewById(R.id.add_one2);
+		add52 = (Button) findViewById(R.id.add_five2);
+		sub12 = (Button) findViewById(R.id.minus_one2);
+		sub52 = (Button) findViewById(R.id.minus_five2);
+		display2 = (TextView) findViewById(R.id.tvCounter2);
+		pdisplay2 = (TextView) findViewById(R.id.tvPoison2);
 
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		pdisplay.bringToFront();
+		display.bringToFront();
+		pdisplay2.bringToFront();
+		display2.bringToFront();
+
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 		add1.setOnClickListener(new View.OnClickListener() {
 
@@ -102,6 +112,64 @@ public class TwoPlayer extends Activity {
 				pdisplay.setText("" + pcounter);
 			}
 		});
+
+		// second player
+
+		add12.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter2++;
+				display2.setText("" + counter2);
+			}
+		});
+		add52.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter2 += 5;
+				display2.setText("" + counter2);
+			}
+		});
+		sub12.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter2--;
+				display2.setText("" + counter2);
+			}
+		});
+		sub52.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				counter2 -= 5;
+				display2.setText("" + counter2);
+			}
+		});
+		padd12.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				pcounter2++;
+				pdisplay2.setText("" + pcounter2);
+			}
+		});
+		psub12.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				pcounter2--;
+				pdisplay2.setText("" + pcounter2);
+			}
+		});
+
 	}
 
 	@Override
@@ -120,20 +188,28 @@ public class TwoPlayer extends Activity {
 			this.finish();
 			return true;
 		}
+		if (item.getItemId() == R.id.twoplayer) {
+			// do nothing
+			return true;
+		}
 		if (item.getItemId() == R.id.reset) {
 			// reset the Activity
 			counter = 20;
 			pcounter = 0;
 			pdisplay.setText("" + 0);
 			display.setText("" + 20);
+			counter2 = 20;
+			pcounter2 = 0;
+			pdisplay2.setText("" + 0);
+			display2.setText("" + 20);
 			return true;
 		}
 		if (item.getItemId() == R.id.oneplayer) {
-			// 2 player
+			// 1 player
 			Thread timer = new Thread() {
 				public void run() {
 					try {
-						sleep(3000);
+						sleep(300);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					} finally {
@@ -152,6 +228,14 @@ public class TwoPlayer extends Activity {
 		// }
 		return false;
 
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		// introSound.release();
+		finish();
 	}
 
 }

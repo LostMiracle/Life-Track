@@ -120,6 +120,10 @@ public class MainActivity extends Activity {
 			this.finish();
 			return true;
 		}
+		if (item.getItemId() == R.id.exit) {
+			// close the Activity
+			return true;
+		}
 		if (item.getItemId() == R.id.reset) {
 			// reset the Activity
 			counter = 20;
@@ -133,7 +137,7 @@ public class MainActivity extends Activity {
 			Thread timer = new Thread() {
 				public void run() {
 					try {
-						sleep(3000);
+						sleep(300);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					} finally {
@@ -146,12 +150,21 @@ public class MainActivity extends Activity {
 			timer.start();
 			return true;
 		}
+
 		// if (item.getItemId() == R.id.mainmenu) {
 		// main menu
 		// return true;
 		// }
 		return false;
 
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		// introSound.release();
+		finish();
 	}
 
 }

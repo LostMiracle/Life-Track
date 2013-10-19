@@ -19,7 +19,7 @@
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="80dp"
         android:text="+1"
-        android:textColor="#006600"
+        android:textColor="#00CC00"
         android:textSize="12sp" />
 
     <TextView
@@ -43,7 +43,7 @@
         android:layout_marginBottom="60dp"
         android:layout_marginRight="80dp"
         android:text="-1"
-        android:textColor="#006600"
+        android:textColor="#00CC00"
         android:textSize="12sp" />
 
     <Button
