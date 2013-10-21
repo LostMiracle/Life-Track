@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TwoPlayer extends Activity {
@@ -17,6 +18,7 @@ public class TwoPlayer extends Activity {
 	Button add1, add5, sub1, sub5, padd1, psub1, add12, add52, sub12, sub52,
 			padd12, psub12;
 	TextView display, pdisplay, display2, pdisplay2;
+	ImageView imgHeart1, imgHeart2, imgPoison1, imgPoison2;
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -50,6 +52,13 @@ public class TwoPlayer extends Activity {
 		sub52 = (Button) findViewById(R.id.minus_five2);
 		display2 = (TextView) findViewById(R.id.tvCounter2);
 		pdisplay2 = (TextView) findViewById(R.id.tvPoison2);
+		
+		imgHeart1 = (ImageView) findViewById(R.id.imgHeart);
+		imgHeart2 = (ImageView) findViewById(R.id.imgHeart2);
+		imgPoison1 = (ImageView) findViewById(R.id.imgPoison);
+		imgPoison2 = (ImageView) findViewById(R.id.imgPoison2);
+		
+		//display2.setRotation(270);
 
 		pdisplay.bringToFront();
 		display.bringToFront();
