@@ -9,5 +9,19 @@
     <string name="onePlayerOption">1 Player</string>
     <string name="mainmenuOption">Main Menu NYI</string>
     <string name="hello_world">Hello world!</string>
+    <string name="minus5">-5</string>
+    <string name="plus5">+5</string>
+    <string name="minus1">-1</string>
+    <string name="plus1">+1</string>
+    <string name="minus5_2">-5</string>
+    <string name="plus5_2">+5</string>
+    <string name="minus1_2">-1</string>
+    <string name="plus1_2">+1</string>
+    <string name="p1">Player 1</string>
+    <string name="p2">Player 2</string>
+    <string name="psub1">-1</string>
+    <string name="psub1_2">-1</string>
+    <string name="padd1">+1</string>
+    <string name="padd1_2">+1</string>
 
 </resources>

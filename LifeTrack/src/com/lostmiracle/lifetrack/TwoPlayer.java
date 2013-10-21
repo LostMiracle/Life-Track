@@ -52,13 +52,13 @@ public class TwoPlayer extends Activity {
 		sub52 = (Button) findViewById(R.id.minus_five2);
 		display2 = (TextView) findViewById(R.id.tvCounter2);
 		pdisplay2 = (TextView) findViewById(R.id.tvPoison2);
-		
+
 		imgHeart1 = (ImageView) findViewById(R.id.imgHeart);
 		imgHeart2 = (ImageView) findViewById(R.id.imgHeart2);
 		imgPoison1 = (ImageView) findViewById(R.id.imgPoison);
 		imgPoison2 = (ImageView) findViewById(R.id.imgPoison2);
-		
-		//display2.setRotation(270);
+
+		// display2.setRotation(270);
 
 		pdisplay.bringToFront();
 		display.bringToFront();
@@ -239,12 +239,12 @@ public class TwoPlayer extends Activity {
 
 	}
 
-	//@Override
-	//protected void onPause() {
-		// TODO Auto-generated method stub
-		//super.onPause();
-		// introSound.release();
-		//finish();
-	//}
+	// @Override
+	// protected void onPause() {
+	// TODO Auto-generated method stub
+	// super.onPause();
+	// introSound.release();
+	// finish();
+	// }
 
 }

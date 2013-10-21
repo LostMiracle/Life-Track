@@ -18,7 +18,7 @@
         android:layout_alignBottom="@+id/add_one"
         android:layout_toRightOf="@+id/add_one"
         android:minWidth="70dp"
-        android:text="+5"
+        android:text="@string/plus5"
         android:textColor="#00FF00" />
 
     <Button
@@ -28,7 +28,7 @@
         android:layout_below="@+id/add_one"
         android:layout_toRightOf="@+id/add_one"
         android:minWidth="70dp"
-        android:text="-5"
+        android:text="@string/minus5"
         android:textColor="#FF0000" />
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_alignBottom="@+id/minus_five"
         android:layout_toLeftOf="@+id/minus_five"
         android:minWidth="70dp"
-        android:text="-1"
+        android:text="@string/minus1"
         android:textColor="#FF0000" />
 
     <Button
@@ -49,7 +49,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/tvCounter"
         android:minWidth="70dp"
-        android:text="+1"
+        android:text="@string/plus1"
         android:textColor="#00FF00" />
 
     <ImageView
@@ -60,7 +60,7 @@
         android:layout_marginLeft="46dp"
         android:layout_marginTop="14dp"
         android:layout_toRightOf="@+id/psub1"
-        android:src="@drawable/poison" />
+        android:src="@drawable/poison" android:contentDescription="@string/TODO"/>
 
     <ImageView
         android:id="@+id/imgHeart"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="27dp"
         android:layout_toRightOf="@+id/add_five"
-        android:src="@drawable/heart" />
+        android:src="@drawable/heart" android:contentDescription="@string/TODO"/>
 
     <Button
         android:id="@+id/add_five2"
@@ -79,7 +79,7 @@
         android:layout_above="@+id/minus_five"
         android:layout_alignParentRight="true"
         android:minWidth="70dp"
-        android:text="+5"
+        android:text="@string/plus5"
         android:textColor="#00FF00" />
 
     <Button
@@ -89,7 +89,7 @@
         android:layout_alignTop="@+id/add_five2"
         android:layout_toLeftOf="@+id/add_five2"
         android:minWidth="70dp"
-        android:text="+1"
+        android:text="@string/plus1_2"
         android:textColor="#00FF00" />
 
     <Button
@@ -99,7 +99,7 @@
         android:layout_alignLeft="@+id/add_one2"
         android:layout_below="@+id/add_one2"
         android:minWidth="70dp"
-        android:text="-1"
+        android:text="@string/minus1_2"
         android:textColor="#FF0000" />
 
     <Button
@@ -109,7 +109,7 @@
         android:layout_alignLeft="@+id/add_five2"
         android:layout_below="@+id/add_five2"
         android:minWidth="70dp"
-        android:text="-5"
+        android:text="@string/minus5_2"
         android:textColor="#FF0000" />
 
     <ImageView
@@ -119,7 +119,7 @@
         android:layout_alignLeft="@+id/imgHeart2"
         android:layout_alignTop="@+id/imgPoison"
         android:layout_marginLeft="38dp"
-        android:src="@drawable/poison" />
+        android:src="@drawable/poison" android:contentDescription="@string/TODO"/>
 
     <ImageView
         android:id="@+id/imgHeart2"
@@ -128,29 +128,29 @@
         android:layout_above="@+id/imgPoison"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/add_one2"
-        android:src="@drawable/heart" />
+        android:src="@drawable/heart" android:contentDescription="@string/TODO"/>
 
     <TextView
-        android:id="@+id/name1"
+        android:id="@+id/player2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvCounter"
         android:layout_alignLeft="@+id/add_one"
         android:layout_toLeftOf="@+id/imgHeart"
         android:gravity="center"
-        android:text="Player 2"
+        android:text="@string/p2"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/player2"
+        android:id="@+id/player1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imgHeart2"
         android:layout_alignLeft="@+id/add_one2"
         android:layout_alignRight="@+id/add_five2"
         android:gravity="center"
-        android:text="Player 1"
+        android:text="@string/p1"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
 
@@ -162,7 +162,7 @@
         android:layout_alignBaseline="@+id/padd12"
         android:layout_alignBottom="@+id/padd12"
         android:layout_alignRight="@+id/minus_five2"
-        android:text="-1"
+        android:text="@string/psub1_2"
         android:textColor="#00CC00"
         android:textSize="12sp" />
 
@@ -195,7 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tvPoison"
         android:layout_toLeftOf="@+id/imgHeart"
-        android:text="-1"
+        android:text="@string/psub1"
         android:textColor="#00CC00"
         android:textSize="12sp" />
 
@@ -207,7 +207,7 @@
         android:layout_alignBaseline="@+id/psub1"
         android:layout_alignBottom="@+id/psub1"
         android:layout_alignLeft="@+id/minus_one"
-        android:text="+1"
+        android:text="@string/padd1"
         android:textColor="#00CC00"
         android:textSize="12sp" />
 
@@ -218,7 +218,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tvPoison2"
         android:layout_alignLeft="@+id/minus_one2"
-        android:text="+1"
+        android:text="@string/padd1_2"
         android:textColor="#00CC00"
         android:textSize="12sp" />
 
