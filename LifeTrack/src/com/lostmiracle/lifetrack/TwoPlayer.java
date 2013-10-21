@@ -28,14 +28,6 @@ public class TwoPlayer extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.twoplayer);
-		display2.setRotation(180);
-		pdisplay2.setRotation(180);
-		sub52.setRotation(180);
-		sub12.setRotation(180);
-		add52.setRotation(180);
-		add12.setRotation(180);
-		psub12.setRotation(180);
-		padd12.setRotation(180);
 
 		pcounter = 0;
 		counter = 20;
@@ -64,7 +56,7 @@ public class TwoPlayer extends Activity {
 		pdisplay2.bringToFront();
 		display2.bringToFront();
 
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 		add1.setOnClickListener(new View.OnClickListener() {
 
@@ -238,12 +230,12 @@ public class TwoPlayer extends Activity {
 
 	}
 
-	// @Override
-	// protected void onPause() {
-	// TODO Auto-generated method stub
-	// super.onPause();
-	// introSound.release();
-	// finish();
-	// }
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		// introSound.release();
+		finish();
+	}
 
 }
