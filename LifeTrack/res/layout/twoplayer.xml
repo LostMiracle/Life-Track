@@ -2,21 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:keepScreenOn="true"
     android:background="@android:color/black"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:keepScreenOn="true"
     tools:context=".MainActivity" >
 
     <Button
         android:id="@+id/add_five"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_one"
-        android:layout_alignBottom="@+id/add_one"
-        android:layout_toRightOf="@+id/add_one"
+        android:layout_alignBottom="@id/add_one"
+        android:layout_toRightOf="@id/add_one"
         android:minWidth="70dp"
         android:text="@string/plus5"
         android:textColor="#00FF00" />
@@ -25,8 +20,8 @@
         android:id="@+id/minus_five"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/add_one"
-        android:layout_toRightOf="@+id/add_one"
+        android:layout_alignBottom="@id/add_one"
+        android:layout_alignParentRight="true"
         android:minWidth="70dp"
         android:text="@string/minus5"
         android:textColor="#FF0000" />
@@ -35,9 +30,8 @@
         android:id="@+id/minus_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/minus_five"
-        android:layout_alignBottom="@+id/minus_five"
-        android:layout_toLeftOf="@+id/minus_five"
+        android:layout_alignBottom="@id/minus_five"
+        android:layout_toLeftOf="@id/minus_five"
         android:minWidth="70dp"
         android:text="@string/minus1"
         android:textColor="#FF0000" />
@@ -46,8 +40,8 @@
         android:id="@+id/add_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/tvCounter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
         android:minWidth="70dp"
         android:text="@string/plus1"
         android:textColor="#00FF00" />
@@ -56,112 +50,70 @@
         android:id="@+id/imgPoison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgHeart"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="14dp"
-        android:layout_toRightOf="@+id/psub1"
-        android:src="@drawable/poison" android:contentDescription="@string/TODO"/>
-
-    <ImageView
-        android:id="@+id/imgHeart"
-        android:layout_width="132dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="27dp"
-        android:layout_toRightOf="@+id/add_five"
-        android:src="@drawable/heart" android:contentDescription="@string/TODO"/>
-
-    <Button
-        android:id="@+id/add_five2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/minus_five"
-        android:layout_alignParentRight="true"
-        android:minWidth="70dp"
-        android:text="@string/plus5"
-        android:textColor="#00FF00" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/TODO"
+        android:src="@drawable/poison" />
 
     <Button
         android:id="@+id/add_one2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/add_five2"
-        android:layout_toLeftOf="@+id/add_five2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="75dp"
         android:minWidth="70dp"
+        android:rotation="180"
         android:text="@string/plus1_2"
+        android:textColor="#00FF00" />
+
+    <Button
+        android:id="@+id/minus_five2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/add_one2"
+        android:minWidth="70dp"
+        android:rotation="180"
+        android:text="@string/minus5_2"
+        android:textColor="#FF0000" />
+
+    <Button
+        android:id="@+id/add_five2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/add_one2"
+        android:layout_toLeftOf="@id/add_one2"
+        android:minWidth="70dp"
+        android:rotation="180"
+        android:text="@string/plus5"
         android:textColor="#00FF00" />
 
     <Button
         android:id="@+id/minus_one2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/add_one2"
-        android:layout_below="@+id/add_one2"
+        android:layout_alignBottom="@id/minus_five2"
+        android:layout_toRightOf="@id/minus_five2"
         android:minWidth="70dp"
+        android:rotation="180"
         android:text="@string/minus1_2"
-        android:textColor="#FF0000" />
-
-    <Button
-        android:id="@+id/minus_five2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/add_five2"
-        android:layout_below="@+id/add_five2"
-        android:minWidth="70dp"
-        android:text="@string/minus5_2"
         android:textColor="#FF0000" />
 
     <ImageView
         android:id="@+id/imgPoison2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgHeart2"
-        android:layout_alignTop="@+id/imgPoison"
-        android:layout_marginLeft="38dp"
-        android:src="@drawable/poison" android:contentDescription="@string/TODO"/>
-
-    <ImageView
-        android:id="@+id/imgHeart2"
-        android:layout_width="132dp"
-        android:layout_height="150dp"
-        android:layout_above="@+id/imgPoison"
-        android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@+id/add_one2"
-        android:src="@drawable/heart" android:contentDescription="@string/TODO"/>
-
-    <TextView
-        android:id="@+id/player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tvCounter"
-        android:layout_alignLeft="@+id/add_one"
-        android:layout_toLeftOf="@+id/imgHeart"
-        android:gravity="center"
-        android:text="@string/p2"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imgHeart2"
-        android:layout_alignLeft="@+id/add_one2"
-        android:layout_alignRight="@+id/add_five2"
-        android:gravity="center"
-        android:text="@string/p1"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/TODO"
+        android:rotation="180"
+        android:src="@drawable/poison" />
 
     <Button
         android:id="@+id/psub12"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/padd12"
-        android:layout_alignBottom="@+id/padd12"
-        android:layout_alignRight="@+id/minus_five2"
+        android:layout_alignLeft="@id/minus_one2"
+        android:rotation="180"
         android:text="@string/psub1_2"
         android:textColor="#00CC00"
         android:textSize="12sp" />
@@ -170,31 +122,29 @@
         android:id="@+id/tvPoison2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgPoison2"
-        android:layout_alignTop="@+id/imgPoison2"
-        android:layout_marginLeft="11dp"
+        android:layout_centerHorizontal="true"
+        android:rotation="180"
         android:text="0"
         android:textColor="#008000"
-        android:textSize="45sp" />
+        android:textSize="50sp" />
 
     <TextView
         android:id="@+id/tvPoison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgPoison"
-        android:layout_alignTop="@+id/imgPoison"
-        android:layout_marginLeft="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:text="0"
         android:textColor="#008000"
-        android:textSize="45sp" />
+        android:textSize="50sp" />
 
     <Button
         android:id="@+id/psub1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvPoison"
-        android:layout_toLeftOf="@+id/imgHeart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/minus_one"
         android:text="@string/psub1"
         android:textColor="#00CC00"
         android:textSize="12sp" />
@@ -204,9 +154,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/psub1"
-        android:layout_alignBottom="@+id/psub1"
-        android:layout_alignLeft="@+id/minus_one"
+        android:layout_alignLeft="@id/add_five"
+        android:layout_alignParentBottom="true"
         android:text="@string/padd1"
         android:textColor="#00CC00"
         android:textSize="12sp" />
@@ -216,35 +165,80 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvPoison2"
-        android:layout_alignLeft="@+id/minus_one2"
+        android:layout_alignRight="@id/add_five2"
+        android:rotation="180"
         android:text="@string/padd1_2"
         android:textColor="#00CC00"
         android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/tvCounter2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imgHeart"
+        android:layout_width="132dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/add_five"
         android:layout_alignLeft="@+id/imgHeart2"
-        android:layout_alignTop="@+id/add_one2"
-        android:layout_marginLeft="24dp"
-        android:text="20"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#C2DFFF"
-        android:textSize="70sp" />
+        android:contentDescription="@string/TODO"
+        android:src="@drawable/heart" />
 
     <TextView
         android:id="@+id/tvCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgHeart"
+        android:layout_alignLeft="@+id/tvCounter2"
         android:layout_alignTop="@+id/imgHeart"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="10dp"
         android:text="20"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#C2DFFF"
-        android:textSize="70sp" />
+        android:textSize="100sp" />
+
+    <ImageView
+        android:id="@+id/imgHeart2"
+        android:layout_width="132dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/add_five2"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/TODO"
+        android:rotation="180"
+        android:src="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/tvCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgHeart2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:rotation="180"
+        android:text="20"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#C2DFFF"
+        android:textSize="100sp" />
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imgHeart2"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="@string/p1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvCounter2"
+        android:layout_alignBottom="@+id/tvCounter2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="@string/p2"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
 </RelativeLayout>

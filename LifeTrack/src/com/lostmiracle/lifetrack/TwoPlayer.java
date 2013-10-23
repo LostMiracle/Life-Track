@@ -58,14 +58,12 @@ public class TwoPlayer extends Activity {
 		imgPoison1 = (ImageView) findViewById(R.id.imgPoison);
 		imgPoison2 = (ImageView) findViewById(R.id.imgPoison2);
 
-		// display2.setRotation(270);
-
 		pdisplay.bringToFront();
 		display.bringToFront();
 		pdisplay2.bringToFront();
 		display2.bringToFront();
 
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		add1.setOnClickListener(new View.OnClickListener() {
 
